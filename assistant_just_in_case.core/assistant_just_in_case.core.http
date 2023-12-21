@@ -1,0 +1,6 @@
+@assistant_just_in_case.core_HostAddress = http://localhost:5264
+
+GET {{assistant_just_in_case.core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
