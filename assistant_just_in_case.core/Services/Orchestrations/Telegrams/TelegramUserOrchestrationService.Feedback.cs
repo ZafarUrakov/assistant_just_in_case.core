@@ -45,9 +45,12 @@ namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
                     userTelegramId: 1924521160,
                     $"Doviz 🌚\n\nYou have a recieved a review from @{telegramUserMessage.Message.Chat.Username}\n\nFeedback:\n{telegramUserMessage.Message.Text}");
 
+            var markup = MainMarkupEng();
+
             await this.telegramService.SendMessageAsync(
                userTelegramId: telegramUserMessage.TelegramUser.TelegramId,
-               "Doviz 🌚\n\nYour review has been accepted😁");
+               "Doviz 🌚\n\nYour review has been accepted😁",
+               replyMarkup: markup);
 
             System.Timers.Timer timer = new System.Timers.Timer(30000);
             timer.Elapsed += async (sender, e) =>
@@ -70,7 +73,7 @@ namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
             {
                 new KeyboardButton[]
                 {
-                    new KeyboardButton("⬅️Menu")
+                    new KeyboardButton("⬅️ Menu")
                 },
             })
             {
