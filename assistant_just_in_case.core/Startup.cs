@@ -3,18 +3,15 @@
 // Manage Your Money Easy
 //===========================
 
-using System;
-using System.Text.Json.Serialization;
 using assistant_just_in_case.core.Brokers.Storages;
+using assistant_just_in_case.core.Brokers.Telegrams;
 using assistant_just_in_case.core.Services.Foundations.Converters;
-using assistant_just_in_case.Services.Foundations.Telegrams;
-using assistant_just_in_case.Services.Foundations.TelegramUsers;
-using assistant_just_in_case.Services.Orchestrations.Telegrams;
+using assistant_just_in_case.core.Services.Foundations.Telegrams;
+using assistant_just_in_case.core.Services.Foundations.TelegramUsers;
+using assistant_just_in_case.core.Services.Orchestrations.Telegrams;
 using assistant_just_in_case.Services.Processings.Telegrams;
-using doviz_bot.Brokers.Telegrams;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

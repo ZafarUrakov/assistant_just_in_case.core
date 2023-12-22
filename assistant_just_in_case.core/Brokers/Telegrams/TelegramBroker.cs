@@ -9,7 +9,7 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace doviz_bot.Brokers.Telegrams
+namespace assistant_just_in_case.core.Brokers.Telegrams
 {
     public class TelegramBroker : ITelegramBroker
     {
@@ -18,7 +18,7 @@ namespace doviz_bot.Brokers.Telegrams
 
         public TelegramBroker(IConfiguration configuration)
         {
-            string token = "6766231457:AAF5eoGILjHzNx5wz0kQTRKKcjjbz52nsOY";
+            string token = "6170279042:AAHGiDj3JeE_cditznblmEbc_VuHDsliVag";
 
             this.telegramBotClient = new TelegramBotClient(token);
             ReceiverOptions receiverOptions = new()

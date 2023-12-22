@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using assistant_just_in_case.core.Models.TelegramUsers;
 
-namespace assistant_just_in_case.Services.Foundations.TelegramUsers
+namespace assistant_just_in_case.core.Services.Foundations.TelegramUsers
 {
     public interface ITelegramUserService
     {

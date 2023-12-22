@@ -5,7 +5,7 @@
 
 using System.Threading.Tasks;
 using assistant_just_in_case.core.Models.TelegramUsers;
-using assistant_just_in_case.Services.Foundations.TelegramUsers;
+using assistant_just_in_case.core.Services.Foundations.TelegramUsers;
 using Microsoft.EntityFrameworkCore;
 
 namespace assistant_just_in_case.Services.Processings.Telegrams
