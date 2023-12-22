@@ -12,7 +12,7 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace doviz_bot.Services.Foundations.Telegrams
+namespace assistant_just_in_case.Services.Foundations.Telegrams
 {
     public class TelegramService : ITelegramService
     {

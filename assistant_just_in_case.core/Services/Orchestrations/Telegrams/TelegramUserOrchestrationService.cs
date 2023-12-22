@@ -6,9 +6,9 @@
 using System.Threading.Tasks;
 using assistant_just_in_case.core.Models.TelegramUserMessages;
 using assistant_just_in_case.core.Services.Foundations.Converters;
+using assistant_just_in_case.Services.Foundations.Telegrams;
+using assistant_just_in_case.Services.Foundations.TelegramUsers;
 using assistant_just_in_case.Services.Processings.Telegrams;
-using doviz_bot.Services.Foundations.Telegrams;
-using doviz_bot.Services.Foundations.TelegramUsers;
 using Telegram.Bot.Types.ReplyMarkups;
 
 namespace assistant_just_in_case.Services.Orchestrations.Telegrams
