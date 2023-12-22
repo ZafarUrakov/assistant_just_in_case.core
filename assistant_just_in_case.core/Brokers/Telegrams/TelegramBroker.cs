@@ -18,7 +18,7 @@ namespace doviz_bot.Brokers.Telegrams
 
         public TelegramBroker(IConfiguration configuration)
         {
-            string token = configuration["BotConfiguration:BotToken"];
+            string token = "6766231457:AAF5eoGILjHzNx5wz0kQTRKKcjjbz52nsOY";
 
             this.telegramBotClient = new TelegramBotClient(token);
             ReceiverOptions receiverOptions = new()

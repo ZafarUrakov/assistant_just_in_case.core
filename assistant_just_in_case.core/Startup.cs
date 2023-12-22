@@ -54,7 +54,7 @@ namespace assistant_just_in_case
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication1 v1"));
-                //RegisterEventListeners(app);
+                RegisterEventListeners(app);
             }
 
             app.UseHttpsRedirection();
