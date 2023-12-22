@@ -26,7 +26,7 @@ AddOrchestrationServices(builder);
 
 var app = builder.Build();
 
-RegisterEventListeners(app);
+//RegisterEventListeners(app);
 
 if (app.Environment.IsDevelopment())
 {
