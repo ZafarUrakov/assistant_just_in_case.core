@@ -26,7 +26,7 @@ AddOrchestrationServices(builder);
 
 var app = builder.Build();
 
-//RegisterEventListeners(app);
+RegisterEventListeners(app);
 
 static void AddBrokers(WebApplicationBuilder builder)
 {
