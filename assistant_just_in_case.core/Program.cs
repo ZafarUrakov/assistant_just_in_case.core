@@ -28,12 +28,6 @@ var app = builder.Build();
 
 //RegisterEventListeners(app);
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 static void AddBrokers(WebApplicationBuilder builder)
 {
     builder.Services.AddTransient<IStorageBroker, StorageBroker>();
