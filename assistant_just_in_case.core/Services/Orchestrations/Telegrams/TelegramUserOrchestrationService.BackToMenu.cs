@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 using assistant_just_in_case.core.Models.TelegramUserMessages;
 using assistant_just_in_case.core.Models.TelegramUsers;
 
-namespace assistant_just_in_case.Services.Orchestrations.Telegrams
+namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
 {
     public partial class TelegramUserOrchestrationService
     {
         public async ValueTask<bool> BackToMenu(TelegramUserMessage telegramUserMessage)
         {
-            if (telegramUserMessage.Message.Text == menuCommand
+            if (telegramUserMessage.Message.Text == backToMenuCommand
                 || telegramUserMessage.Message.Text == startCommand)
             {
                 var markup = MainMarkupEng();

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using assistant_just_in_case.core.Brokers.Storages;
 using assistant_just_in_case.core.Models.TelegramUsers;
 
-namespace assistant_just_in_case.Services.Foundations.TelegramUsers
+namespace assistant_just_in_case.core.Services.Foundations.TelegramUsers
 {
     public class TelegramUserService : ITelegramUserService
     {

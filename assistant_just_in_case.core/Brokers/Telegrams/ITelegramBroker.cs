@@ -4,7 +4,7 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace doviz_bot.Brokers.Telegrams
+namespace assistant_just_in_case.core.Brokers.Telegrams
 {
     public interface ITelegramBroker
     {

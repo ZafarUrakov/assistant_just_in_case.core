@@ -6,12 +6,12 @@
 using System.Threading.Tasks;
 using assistant_just_in_case.core.Models.TelegramUserMessages;
 using assistant_just_in_case.core.Services.Foundations.Converters;
-using assistant_just_in_case.Services.Foundations.Telegrams;
-using assistant_just_in_case.Services.Foundations.TelegramUsers;
+using assistant_just_in_case.core.Services.Foundations.Telegrams;
+using assistant_just_in_case.core.Services.Foundations.TelegramUsers;
 using assistant_just_in_case.Services.Processings.Telegrams;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace assistant_just_in_case.Services.Orchestrations.Telegrams
+namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
 {
     public partial class TelegramUserOrchestrationService : ITelegramUserOrchestrationService
     {
@@ -34,7 +34,9 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
 
         private const string startCommand = "/start";
         private const string convertCommand = "💰 Convert";
-        private const string menuCommand = "⬅️Menu";
+        private const string weatherCommand = "🌦 Weather";
+        private const string backToMenuCommand = "⬅️ Menu";
+        private const string menuCommand = "🧩 Menu";
         private const string connectWithUseCommand = "ℹ️ Connect with us";
         private const string feedbackCommand = "✍️ Leave feedback";
 
@@ -47,7 +49,16 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
             if (await StartAsync(telegramUserMessage))
                 return telegramUserMessage;
 
+            if (await MenuAsync(telegramUserMessage))
+                return telegramUserMessage;
+
             if (await BackToMenu(telegramUserMessage))
+                return telegramUserMessage;
+
+            if (await ConvertAsync(telegramUserMessage))
+                return telegramUserMessage;
+
+            if (await WeatherAsync(telegramUserMessage))
                 return telegramUserMessage;
 
             if (await ConnectWithUsAsync(telegramUserMessage))
@@ -57,9 +68,6 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
                 return telegramUserMessage;
 
             if (await RegisterAsync(telegramUserMessage))
-                return telegramUserMessage;
-
-            if (await ConvertAsync(telegramUserMessage))
                 return telegramUserMessage;
 
             return telegramUserMessage;
@@ -77,7 +85,7 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
         {
             return new ReplyKeyboardMarkup(new KeyboardButton[][]
             {
-                new KeyboardButton[]{new KeyboardButton("💰 Convert")},
+                new KeyboardButton[]{new KeyboardButton("🧩 Menu") },
                 new KeyboardButton[]
                 {
                     new KeyboardButton("✍️ Leave feedback"),

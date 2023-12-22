@@ -10,7 +10,7 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace assistant_just_in_case.Services.Foundations.Telegrams
+namespace assistant_just_in_case.core.Services.Foundations.Telegrams
 {
     public interface ITelegramService
     {

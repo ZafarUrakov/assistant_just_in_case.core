@@ -5,14 +5,14 @@
 
 using System;
 using System.Threading.Tasks;
+using assistant_just_in_case.core.Brokers.Telegrams;
 using assistant_just_in_case.core.Models.TelegramUserMessages;
 using assistant_just_in_case.core.Models.TelegramUsers;
-using doviz_bot.Brokers.Telegrams;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace assistant_just_in_case.Services.Foundations.Telegrams
+namespace assistant_just_in_case.core.Services.Foundations.Telegrams
 {
     public class TelegramService : ITelegramService
     {

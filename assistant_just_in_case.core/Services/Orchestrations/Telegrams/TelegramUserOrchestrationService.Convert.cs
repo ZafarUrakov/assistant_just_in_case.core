@@ -14,7 +14,7 @@ using assistant_just_in_case.core.Models.TelegramUsers;
 using Newtonsoft.Json.Linq;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace assistant_just_in_case.Services.Orchestrations.Telegrams
+namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
 {
     public partial class TelegramUserOrchestrationService
     {
@@ -59,7 +59,7 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
                             await this.telegramUserProcessingService
                                    .ModifyTelegramUserAsync(telegramUserMessage.TelegramUser);
 
-                            var markup = new ReplyKeyboardMarkup(new KeyboardButton[] { "⬅️Menu" })
+                            var markup = new ReplyKeyboardMarkup(new KeyboardButton[] { "⬅️ Menu" })
                             {
                                 ResizeKeyboard = true
                             };
@@ -99,7 +99,6 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
                             message: $"Doviz 💵\n\n Select the currency into which you want to convert {converter.FirstCurrency}",
                             replyMarkup: markup);
                     }
-
 
                     return false;
                 }
@@ -211,7 +210,7 @@ namespace assistant_just_in_case.Services.Orchestrations.Telegrams
                 },
                new KeyboardButton[]
                 {
-                    new KeyboardButton("⬅️Menu"),
+                    new KeyboardButton("⬅️ Menu"),
                 },
             })
             {
