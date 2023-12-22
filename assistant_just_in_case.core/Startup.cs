@@ -72,25 +72,15 @@ namespace assistant_just_in_case
 
         private static void RegisterEventListeners(IApplicationBuilder app)
         {
-            app.UseExceptionHandler(errorApp =>
+            var scopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
+
+            using (var scope = scopeFactory.CreateScope())
             {
-                errorApp.Run(async context =>
-                {
-                    context.Response.StatusCode = 500; // Internal Server Error
-                    context.Response.ContentType = "text/plain";
+                var telegramService = scope.ServiceProvider.GetRequiredService<ITelegramUserOrchestrationService>();
 
-                    var exceptionHandlerPathFeature = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>();
-                    var exception = exceptionHandlerPathFeature.Error;
+                telegramService.ListenTelegramUserMessage();
 
-                    // Log the exception if needed
-                    Console.WriteLine($"Exception during startup: {exception}");
-
-                    await context.Response.WriteAsync("Internal Server Error. Please try again later.");
-                });
-            });
-
-            app.ApplicationServices.GetRequiredService<ITelegramUserOrchestrationService>()
-                .ListenTelegramUserMessage();
+            }
         }
 
         private static void AddBrokers(IServiceCollection services)
