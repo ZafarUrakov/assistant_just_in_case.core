@@ -12,6 +12,7 @@ namespace assistant_just_in_case.core.Models.TelegramUsers
         First,
         Amount,
         Last,
-        Feedback
+        Feedback,
+        Weather
     }
 }
