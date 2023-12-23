@@ -69,6 +69,9 @@ namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
 
             if (await RegisterAsync(telegramUserMessage))
                 return telegramUserMessage;
+            
+            if (await RegisterAsync(telegramUserMessage))
+                return telegramUserMessage;
 
             return telegramUserMessage;
         }
