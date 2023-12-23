@@ -178,10 +178,6 @@ namespace assistant_just_in_case.core.Services.Orchestrations.Telegrams
                     }
                 }
             }
-            else if (telegramUserMessage.TelegramUser.Status == TelegramUserStatus.Amount)
-            {
-
-            }
 
             return false;
         }

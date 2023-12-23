@@ -44,7 +44,7 @@ namespace assistant_just_in_case.core.Services.Foundations.Telegrams
                 {
                     TelegramUser = telegramUser,
                     Message = update.Message
-                };
+                }; 
 
                 await eventHandler(telegramUserMessage);
             }
