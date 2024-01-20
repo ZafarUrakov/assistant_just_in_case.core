@@ -18,7 +18,7 @@ namespace assistant_just_in_case.core.Brokers.Telegrams
 
         public TelegramBroker(IConfiguration configuration)
         {
-            string token = "6505501647:AAEefapD-rEHaoFw6gyG-UNbI3KCCm6NxKU";
+            string token = "6512423591:AAF0jKpu9dbtDpvKZMLqV2RkZ6D1SVSUEqw";
 
             this.telegramBotClient = new TelegramBotClient(token);
             ReceiverOptions receiverOptions = new()
